@@ -11,14 +11,12 @@ package estructurasdedatos.utiles.nodos;
  */
 public class NodoEnteroSimple {
 
-    // Variable en la cual se va a guardar el valor.
+    
     private int valor;
-    // Variable para enlazar los nodos.
+    
     private NodoEnteroSimple siguiente;
 
-    /**
-     * Constructor que inicializamos el valor de las variables.
-     */
+ 
     public void NodoEnteroSimple() {
         this.setValor(0);
         this.setSiguiente(null);

@@ -11,6 +11,7 @@ import estructurasdedatos.cap1.complejidad.EjerciciosComplejidad;
 import java.util.Scanner;
 import estructurasdedatos.cap2.arreglos.Matriz;
 import estructurasdedatos.cap2.arreglos.Vector;
+import estructurasdedatos.cap2.listas.ListaSimple;
 
 /**
  *
@@ -34,7 +35,7 @@ public class EstructurasDeDatos {
         EjerciciosComplejidad complejidad3 = new EjerciciosComplejidad();
         Matriz miMatriz = new Matriz();
         Vector miVector = new Vector();
-
+        ListaSimple miLista = new ListaSimple();
         Scanner inicio = new Scanner(System.in);
         int menu;
         System.out.println("Elija por favor una opcion:");
@@ -68,11 +69,33 @@ public class EstructurasDeDatos {
                 miMatriz.delete(3, 2);
                 break;
             case 4:
+            {
+        int submenu;        
+        System.out.println("Elija por favor una opcion:");
+        System.out.println("1. insertar al final     2. insertar al inicio\n3. listar             4. modificar\n5.Borar ");
+        submenu = inicio.nextInt();
+            switch(submenu){
+        case 1:
+            miLista.addini();
+            break;
+        case 2:
+            miLista.addend();
+            break;
+        case 3:
+            miLista.listar();
+            break;
+        case 4:
+            miLista.editpos();
+            break;
+        case 5:
+            miLista.ddeletenodo();
+            break;
+       }
                 break;
-        }
+            }
     }
 
-    private static void swicht(int menu) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //private static void swicht(int menu) {
+      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
