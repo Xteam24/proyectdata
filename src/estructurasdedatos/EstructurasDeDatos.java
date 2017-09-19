@@ -11,6 +11,7 @@ import estructurasdedatos.cap1.complejidad.EjerciciosComplejidad;
 import java.util.Scanner;
 import estructurasdedatos.cap2.arreglos.Matriz;
 import estructurasdedatos.cap2.arreglos.Vector;
+import estructurasdedatos.cap2.listas.ListaDoble;
 import estructurasdedatos.cap2.listas.ListaSimple;
 
 /**
@@ -21,7 +22,7 @@ public class EstructurasDeDatos {
 
     /**
      * @param args the command line arguments
-     */
+*/
     public static void main(String[] args) {
         Ciclos ejerciciociclo1 = new Ciclos();
         Ciclos ejerciciociclo2 = new Ciclos();
@@ -36,10 +37,11 @@ public class EstructurasDeDatos {
         Matriz miMatriz = new Matriz();
         Vector miVector = new Vector();
         ListaSimple miLista = new ListaSimple();
+        ListaDoble listaDoble = new ListaDoble();
         Scanner inicio = new Scanner(System.in);
         int menu;
         System.out.println("Elija por favor una opcion:");
-        System.out.println("1. Complejidad     2. tipos de datos\n3. Arreglos        4. Listas\n   ");
+        System.out.println("1. Complejidad     2. tipos de datos\n3. Arreglos        4. Listas\n5. Lista Doble   ");
         menu = inicio.nextInt();
 
         switch (menu) {
@@ -93,6 +95,27 @@ public class EstructurasDeDatos {
        }
                 break;
             }
+            case 5:
+        int menudoble;        
+        System.out.println("Elija por favor una opcion:");
+        System.out.println("1. insertar al final     2. Listar\n3. Buscar             4. modificar\n5.Borar ");
+        menudoble = inicio.nextInt();
+            switch(menudoble) {
+                
+                case 1:
+               listaDoble.addend();
+                break;
+                case 2:
+                listaDoble.listar();
+               break;
+                case 3:
+                listaDoble.search();
+                break;
+                case 4:
+                listaDoble.delete();
+                break;
+                
+            }       
     }
 
     //private static void swicht(int menu) {
