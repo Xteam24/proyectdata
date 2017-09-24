@@ -49,4 +49,8 @@ public class NodoEnteroSimple {
     public void setSiguiente(NodoEnteroSimple siguiente) {
         this.siguiente = siguiente;
     }
+
+    public void getSiguiente(Object object) {
+        
+    }
 }

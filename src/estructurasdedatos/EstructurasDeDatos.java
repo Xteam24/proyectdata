@@ -13,6 +13,7 @@ import estructurasdedatos.cap2.arreglos.Matriz;
 import estructurasdedatos.cap2.arreglos.Vector;
 import estructurasdedatos.cap2.listas.ListaDoble;
 import estructurasdedatos.cap2.listas.ListaSimple;
+import estructurasdedatos.cap2.listas.Pila;
 
 /**
  *
@@ -38,10 +39,12 @@ public class EstructurasDeDatos {
         Vector miVector = new Vector();
         ListaSimple miLista = new ListaSimple();
         ListaDoble listaDoble = new ListaDoble();
+        Pila pila = new Pila();
+        
         Scanner inicio = new Scanner(System.in);
         int menu;
         System.out.println("Elija por favor una opcion:");
-        System.out.println("1. Complejidad     2. tipos de datos\n3. Arreglos        4. Listas\n5. Lista Doble   ");
+        System.out.println("1. Complejidad     2. tipos de datos\n3. Arreglos        4. Listas\n5. Lista Doble        6. Pila  ");
         menu = inicio.nextInt();
 
         switch (menu) {
@@ -114,8 +117,14 @@ public class EstructurasDeDatos {
                 case 4:
                 listaDoble.delete();
                 break;
-                
-            }       
+           }   
+            case 6:
+             pila.insert(3);
+             pila.insert(2);
+             pila.insert(1);
+             pila.list();
+             
+             break;
     }
 
     //private static void swicht(int menu) {
