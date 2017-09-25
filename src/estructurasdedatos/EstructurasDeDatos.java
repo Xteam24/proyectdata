@@ -14,6 +14,7 @@ import estructurasdedatos.cap2.arreglos.Vector;
 import estructurasdedatos.cap2.listas.ListaDoble;
 import estructurasdedatos.cap2.listas.ListaSimple;
 import estructurasdedatos.cap2.listas.Pila;
+import estructurasdedatos.cap2.listas.Cola;
 
 /**
  *
@@ -23,7 +24,7 @@ public class EstructurasDeDatos {
 
     /**
      * @param args the command line arguments
-*/
+     */
     public static void main(String[] args) {
         Ciclos ejerciciociclo1 = new Ciclos();
         Ciclos ejerciciociclo2 = new Ciclos();
@@ -40,11 +41,12 @@ public class EstructurasDeDatos {
         ListaSimple miLista = new ListaSimple();
         ListaDoble listaDoble = new ListaDoble();
         Pila pila = new Pila();
-        
+        Cola cola = new Cola();
+
         Scanner inicio = new Scanner(System.in);
         int menu;
         System.out.println("Elija por favor una opcion:");
-        System.out.println("1. Complejidad     2. tipos de datos\n3. Arreglos        4. Listas\n5. Lista Doble        6. Pila  ");
+        System.out.println("1. Complejidad     2. tipos de datos\n3. Arreglos        4. Listas\n5. Lista Doble        6. Pila\n7.Cola  ");
         menu = inicio.nextInt();
 
         switch (menu) {
@@ -73,61 +75,69 @@ public class EstructurasDeDatos {
                 miMatriz.update(3, 2, 2);
                 miMatriz.delete(3, 2);
                 break;
-            case 4:
-            {
-        int submenu;        
-        System.out.println("Elija por favor una opcion:");
-        System.out.println("1. insertar al final     2. insertar al inicio\n3. listar             4. modificar\n5.Borar ");
-        submenu = inicio.nextInt();
-            switch(submenu){
-        case 1:
-            miLista.addini();
-            break;
-        case 2:
-            miLista.addend();
-            break;
-        case 3:
-            miLista.listar();
-            break;
-        case 4:
-            miLista.editpos();
-            break;
-        case 5:
-            miLista.ddeletenodo();
-            break;
-       }
+            case 4: {
+                int submenu;
+                System.out.println("Elija por favor una opcion:");
+                System.out.println("1. insertar al final     2. insertar al inicio\n3. listar             4. modificar\n5.Borar ");
+                submenu = inicio.nextInt();
+                switch (submenu) {
+                    case 1:
+                        miLista.addini();
+                        break;
+                    case 2:
+                        miLista.addend();
+                        break;
+                    case 3:
+                        miLista.listar();
+                        break;
+                    case 4:
+                        miLista.editpos();
+                        break;
+                    case 5:
+                        miLista.ddeletenodo();
+                        break;
+                }
                 break;
             }
             case 5:
-        int menudoble;        
-        System.out.println("Elija por favor una opcion:");
-        System.out.println("1. insertar al final     2. Listar\n3. Buscar             4. modificar\n5.Borar ");
-        menudoble = inicio.nextInt();
-            switch(menudoble) {
-                
-                case 1:
-               listaDoble.addend();
-                break;
-                case 2:
-                listaDoble.listar();
-               break;
-                case 3:
-                listaDoble.search();
-                break;
-                case 4:
-                listaDoble.delete();
-                break;
-           }   
-            case 6:
-             pila.insert(3);
-             pila.insert(2);
-             pila.insert(1);
-             pila.list();
-             
-             break;
-    }
+                int menudoble;
+                System.out.println("Elija por favor una opcion:");
+                System.out.println("1. insertar al final     2. Listar\n3. Buscar             4. modificar\n5.Borar ");
+                menudoble = inicio.nextInt();
+                switch (menudoble) {
 
-    //private static void swicht(int menu) {
-      //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+                    case 1:
+                        listaDoble.addend();
+                        break;
+                    case 2:
+                        listaDoble.listar();
+                        break;
+                    case 3:
+                        listaDoble.search();
+                        break;
+                    case 4:
+                        listaDoble.delete();
+                        break;
+                }
+            case 6:
+                pila.insert(5);
+                pila.insert(4);
+                pila.insert(3);
+                pila.insert(2);
+                pila.insert(1);
+                pila.list();
+
+                break;
+            case 7:
+                cola.insert(5);
+                cola.insert(4);
+                cola.insert(3);
+                cola.insert(2);
+                cola.insert(1);
+                cola.list();
+        }
+
+        //private static void swicht(int menu) {
+        //  throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

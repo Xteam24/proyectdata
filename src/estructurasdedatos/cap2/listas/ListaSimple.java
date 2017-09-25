@@ -109,7 +109,7 @@ public class ListaSimple {
         }
     }
 
-    public void ddeletenodo(int posicion) {
+    public void deletenodo(int posicion) {
 
         if (posicion >= 0 && posicion < size) {
 
