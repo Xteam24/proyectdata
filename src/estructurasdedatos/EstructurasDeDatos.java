@@ -26,6 +26,7 @@ public class EstructurasDeDatos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         Ciclos ejerciciociclo1 = new Ciclos();
         Ciclos ejerciciociclo2 = new Ciclos();
         Ciclos ejerciciociclo3 = new Ciclos();

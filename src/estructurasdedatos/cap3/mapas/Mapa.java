@@ -5,10 +5,24 @@
  */
 package estructurasdedatos.cap3.mapas;
 
+
 /**
  *
  * @author tusk
  */
 public class Mapa {
+    
+    private int valor, llave;
+  
+    public void Mapa(){
+        valor = 0 ;
+        llave = 0 ;
+    }
+    public void insertar(){
+     
+        
+        
+        
+    }
     
 }

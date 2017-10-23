@@ -9,14 +9,40 @@ package estructurasdedatos.cap1.complejidad;
  *
  * @author xteam
  */
-class Persona {
- Persona xteam = new Persona();
-    void setNombre(String stiven_Pulgarin) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+  public class Persona {
+
+    private int dato;
+    private String tipodato;
+
+    public Persona() {
+       
     }
 
-    String getNombre() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /**
+     * @return the dato
+     */
+    public int getDato() {
+        return dato;
     }
-    
+
+    /**
+     * @param dato the dato to set
+     */
+    public void setDato(int dato) {
+        this.dato = dato;
+    }
+
+    /**
+     * @return the tipodato
+     */
+    public String getTipodato() {
+        return tipodato;
+    }
+
+    /**
+     * @param tipodato the tipodato to set
+     */
+    public void setTipodato(String tipodato) {
+        this.tipodato = tipodato;
+    }
 }

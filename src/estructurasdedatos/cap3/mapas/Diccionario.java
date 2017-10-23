@@ -10,5 +10,7 @@ package estructurasdedatos.cap3.mapas;
  * @author tusk
  */
 public class Diccionario {
+    String [] principal = new String [8];
+    
     
 }
