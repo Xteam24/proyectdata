@@ -6,6 +6,9 @@
 package estructurasdedatos.cap4.arboles;
 
 import estructurasdedatos.utiles.nodos.NodoArbolB;
+import static java.util.Arrays.equals;
+import static java.util.Arrays.equals;
+import static java.util.Arrays.equals;
 
 /**
  *
@@ -22,63 +25,75 @@ public class ArbolB{
     public ArbolB(NodoArbolB raiz){
         this.raiz = raiz;
     }
+    /**
+     * @return the raiz
+     */
+    public NodoArbolB getRaiz() {
+        return raiz;
+    }
+
+    /**
+     * @param raiz the raiz to set
+     */
+    public void setRaiz(NodoArbolB raiz) {
+        this.raiz = raiz;
+    }
+    public boolean esvacia(){
+        return(raiz == null);
+    }
+    
     private void addNodoArbolB(NodoArbolB nodo,NodoArbolB raiz){
-        if (raiz == null){
+        if (esvacia()){
             this.setRaiz(nodo);
         }
-        
-    }    
-
-    /**
-     * @return the raiz
-     */
-    public NodoArbolB getRaiz() {
-        return raiz;
+        else{
+            if(nodo.getValor()<= raiz.getValor()){
+                if(raiz.getHijoIzquierdo()== null){
+                    raiz.setHijoIzquierdo(nodo);
+                }
+                else{
+                    addNodoArbolB(nodo,raiz.getHijoIzquierdo());
+                }    
+            }
+            else{
+                if (raiz.getHijoDerecho()==null){
+                    raiz.setHijoDerecho(nodo);
+                }
+                else{
+                    addNodoArbolB(nodo,raiz.getHijoDerecho());     
+                }
+            }
+        }
     }
-
-    /**
-     * @param raiz the raiz to set
-     */
-    public void setRaiz(NodoArbolB raiz) {
-        this.raiz = raiz;
+    public void addNodoArbolB(NodoArbolB nodo){
+            this.addNodoArbolB(nodo,this.raiz);
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-}
-
-    /**
-     * @return the raiz
-     */
-    public NodoArbolB getRaiz() {
-        return raiz;
+    // Metodos de ordenamiento Preorden,Orden y postorden
+    public void preorden(NodoArbolB raiz){
+        if(raiz != null){
+            System.out.println(raiz.getValor());
+            preorden(raiz.getHijoIzquierdo());
+            preorden(raiz.getHijoDerecho());
+        }
     }
-
-    /**
-     * @param raiz the raiz to set
-     */
-    public void setRaiz(NodoArbolB raiz) {
-        this.raiz = raiz;
+    public void orden (NodoArbolB raiz){
+        if(raiz != null){
+            orden(raiz.getHijoIzquierdo());
+            System.out.println(raiz.getValor());
+            orden(raiz.getHijoDerecho());
+        }
     }
-
-    /**
-     * @return the nodo
-     */
-    public NodoArbolB getNodo() {
-        return nodo;
+    public void postorden(NodoArbolB raiz){
+        if(raiz!=null){
+            postorden(raiz.getHijoIzquierdo());
+            postorden(raiz.getHijoDerecho());
+            System.out.println(raiz.getValor());
+        } 
     }
-
-    /**
-     * @param nodo the nodo to set
-     */
-    public void setNodo(NodoArbolB nodo) {
-        this.nodo = nodo;
-    }
+     public int altura (NodoArbolB nodo){ 
+	if (esvacia())
+         return -1;
+    else
+         return 1+Math.max(altura(nodo.getHijoIzquierdo()),altura(nodo.getHijoDerecho()));
+	} 
+            }

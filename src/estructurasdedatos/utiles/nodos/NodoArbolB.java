@@ -13,7 +13,6 @@ public class NodoArbolB {
     
     private int valor;
     
-    private NodoArbolB padre;
     private NodoArbolB hijoIzquierdo;
     private NodoArbolB hijoDerecho;
     
@@ -39,21 +38,6 @@ public class NodoArbolB {
     public void setValor(int valor) {
         this.valor = valor;
     }
-
-    /**
-     * @return the padre
-     */
-    public NodoArbolB getPadre() {
-        return padre;
-    }
-
-    /**
-     * @param padre the padre to set
-     */
-    public void setPadre(NodoArbolB padre) {
-        this.padre = padre;
-    }
-
     /**
      * @return the hijoIzquierdo
      */
