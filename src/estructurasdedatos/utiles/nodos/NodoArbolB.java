@@ -17,14 +17,14 @@ public class NodoArbolB {
     private NodoArbolB hijoDerecho;
     
     public NodoArbolB (int valor){
-    
+     this.hijoDerecho=null;
+     this.hijoIzquierdo=null;
      this.valor = valor;
     }
 
     public NodoArbolB() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
     /**
      * @return the valor
      */

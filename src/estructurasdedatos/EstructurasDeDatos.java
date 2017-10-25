@@ -15,6 +15,7 @@ import estructurasdedatos.cap2.listas.ListaDoble;
 import estructurasdedatos.cap2.listas.ListaSimple;
 import estructurasdedatos.cap2.listas.Pila;
 import estructurasdedatos.cap2.listas.Cola;
+import estructurasdedatos.cap4.arboles.ArbolB;
 
 /**
  *
@@ -43,7 +44,11 @@ public class EstructurasDeDatos {
         ListaDoble listaDoble = new ListaDoble();
         Pila pila = new Pila();
         Cola cola = new Cola();
-
+        ArbolB arbol = new ArbolB();
+        
+        
+        
+         
         Scanner inicio = new Scanner(System.in);
         int menu;
         System.out.println("Elija por favor una opcion:");
@@ -136,6 +141,16 @@ public class EstructurasDeDatos {
                 cola.insert(2);
                 cola.insert(1);
                 cola.list();
+            case 8:
+                
+                arbol.addNodoArbolB(1);
+                arbol.addNodoArbolB(10);
+                arbol.addNodoArbolB(23);
+                arbol.addNodoArbolB(7);
+           
+                
+                break;
+                
         }
 
         //private static void swicht(int menu) {
