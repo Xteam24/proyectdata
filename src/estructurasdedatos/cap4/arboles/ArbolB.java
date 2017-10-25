@@ -12,23 +12,23 @@ import estructurasdedatos.utiles.nodos.NodoArbolB;
  */
 public class ArbolB{
     
-    NodoArbolB raiz;
+    private NodoArbolB raiz;
     
   public ArbolB() {
         raiz = null;         
     }
     
     public boolean esvacia(){
-        return raiz == null;
+        return getRaiz() == null;
     }
     
     public void addNodoArbolB(int valor){
        NodoArbolB nodo = new NodoArbolB(valor);
        if(esvacia()){
-           raiz = nodo;
+            setRaiz(nodo);
        }
        else{
-           NodoArbolB temp=raiz;
+           NodoArbolB temp=getRaiz();
            NodoArbolB padre;
            while(true){
                padre=temp;
@@ -79,4 +79,34 @@ public class ArbolB{
     else
          return 1+Math.max(altura(nodo.getHijoIzquierdo()),altura(nodo.getHijoDerecho()));
 	}
+     public NodoArbolB buscarNodo8(int valor){
+         NodoArbolB temp = raiz;
+         while(temp.getValor()!=valor){
+             if(valor<temp.getValor()){
+                 temp=temp.getHijoIzquierdo();
+            }
+             else{
+                 temp=temp.getHijoDerecho();
+            }
+            if(temp==null){
+                return null;
+            } 
+         }
+         return temp;
+     }
+
+     
+    /**
+     * @return the raiz
+     */
+    public NodoArbolB getRaiz() {
+        return raiz;
+    }
+
+    /**
+     * @param raiz the raiz to set
+     */
+    public void setRaiz(NodoArbolB raiz) {
+        this.raiz = raiz;
+    }
     }

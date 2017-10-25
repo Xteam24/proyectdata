@@ -147,7 +147,8 @@ public class EstructurasDeDatos {
                 arbol.addNodoArbolB(10);
                 arbol.addNodoArbolB(23);
                 arbol.addNodoArbolB(7);
-           
+                arbol.preorden(arbol.getRaiz());
+                
                 
                 break;
                 
