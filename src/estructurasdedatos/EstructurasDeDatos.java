@@ -156,8 +156,11 @@ public class EstructurasDeDatos {
                 
             case 9:
                 
-                grafo.insertarVertice("a");
-                grafo.insertarVertice("b");
+                grafo.insertarVertice("1");
+                grafo.insertarVertice("2");
+                grafo.insertarVertice("3");
+                grafo.insertarVertice("4");
+                
                 
                 
                 

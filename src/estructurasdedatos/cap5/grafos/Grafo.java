@@ -41,13 +41,6 @@ public class Grafo {
             if (elemento.getVertice1().equals(borrar) || elemento.getVertice2().equals(borrar)) {
                 matrizDeAdyacencia.remove(elemento);
             }
-            
-
         }
-
-        
     }
-
-   
-
-//}
+}

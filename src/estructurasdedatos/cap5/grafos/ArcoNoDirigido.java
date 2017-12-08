@@ -10,8 +10,8 @@ package estructurasdedatos.cap5.grafos;
  * @author xteam
  */
 public class ArcoNoDirigido {
-    private VerticeNoDirigido vertice1;
-    private VerticeNoDirigido vertice2;
+    public VerticeNoDirigido vertice1;
+    public VerticeNoDirigido vertice2;
 
     /**
      * @return the vertice1
