@@ -16,6 +16,7 @@ import estructurasdedatos.cap2.listas.ListaSimple;
 import estructurasdedatos.cap2.listas.Pila;
 import estructurasdedatos.cap2.listas.Cola;
 import estructurasdedatos.cap4.arboles.ArbolB;
+import estructurasdedatos.cap5.grafos.Grafo;
 
 /**
  *
@@ -45,14 +46,14 @@ public class EstructurasDeDatos {
         Pila pila = new Pila();
         Cola cola = new Cola();
         ArbolB arbol = new ArbolB();
-        
+        Grafo grafo = new Grafo();
         
         
          
         Scanner inicio = new Scanner(System.in);
         int menu;
         System.out.println("Elija por favor una opcion:");
-        System.out.println("1. Complejidad     2. tipos de datos\n3. Arreglos        4. Listas\n5. Lista Doble        6. Pila\n7.Cola  ");
+        System.out.println("1. Complejidad     2. tipos de datos\n3. Arreglos        4. Listas\n5. Lista Doble        6. Pila\n7.Cola         8.Arbol\n9.Grafo");
         menu = inicio.nextInt();
 
         switch (menu) {
@@ -141,6 +142,7 @@ public class EstructurasDeDatos {
                 cola.insert(2);
                 cola.insert(1);
                 cola.list();
+                break;
             case 8:
                 
                 arbol.addNodoArbolB(1);
@@ -151,6 +153,13 @@ public class EstructurasDeDatos {
                 
                 
                 break;
+                
+            case 9:
+                
+                grafo.insertarVertice("a");
+                grafo.insertarVertice("b");
+                
+                
                 
         }
 
